@@ -1,0 +1,42 @@
+.product {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+    height: 60vh;
+    width: 80%;
+    padding: 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Colle le contenu en bas */
+    position: relative;
+}
+.product-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1193D4;
+  font-weight: 900;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+  position: relative;
+  z-index: 1;
+}
+.product-description {
+  font-size: 1.1rem;
+  color: #1193d4c9;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.product-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1; /* Ajuste l'opacité selon ton design */
+    pointer-events: none;
+}
