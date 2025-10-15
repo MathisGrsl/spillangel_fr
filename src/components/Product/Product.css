@@ -13,21 +13,39 @@
     position: relative;
 }
 .product-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #1193D4;
-  font-weight: 900;
-  font-family: 'Inter', 'Courier New', Courier, monospace;
-  position: relative;
-  z-index: 1;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1193d4;
+    font-weight: 900;
+    font-family: 'Inter', 'Courier New', Courier, monospace;
+    position: relative;
+    z-index: 1;
 }
+.product-title::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
 .product-description {
-  font-size: 1.1rem;
-  color: #1193d4c9;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 1;
+    font-size: 1.1rem;
+    color: #1193d4c9;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 }
 .product-bg-video {
     position: absolute;

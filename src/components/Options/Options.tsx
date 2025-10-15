@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Options.css';
 
 const optionsData = [
@@ -11,8 +11,34 @@ const optionsData = [
 ];
 
 const Options = () => {
+    const sectionRef = useRef<HTMLElement | null>(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const element = sectionRef.current;
+        const grandParent = sectionRef.current?.parentElement?.parentElement;
+        if (!element || !grandParent) return;
+
+        const handleScroll = () => {
+            const grandParentRect = grandParent.getBoundingClientRect();
+            const rect = element.getBoundingClientRect();
+            const top = rect.top - grandParentRect.top;
+            const bottom = rect.bottom - grandParentRect.top;
+            const height = window.innerHeight;
+
+            setVisible(bottom > 0 && top < height);
+        };
+
+        grandParent.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+        return () => grandParent.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className="options">
+        <section
+            className={`options ${visible ? 'visible' : 'hidden'}`}
+            ref={sectionRef}
+        >
             <h2>Case Options</h2>
             <div className="options-content">
                 <div className="options-title">
@@ -32,7 +58,6 @@ const Options = () => {
                     <img src="atex.png" alt="Atex SpillAngel" />
                 </div>
             </div>
-            
         </section>
     );
 };

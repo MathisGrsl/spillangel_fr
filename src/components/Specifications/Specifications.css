@@ -1,5 +1,13 @@
 .specifications {
+  opacity: 0;
+  transform: translateY(60px);
   padding: 2vh 2vw;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.specifications.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .specifications h2 {

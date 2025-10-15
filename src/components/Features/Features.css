@@ -1,10 +1,26 @@
 .features {
   padding: 2vh 2vw;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+.features.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.features.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* le reste de ton CSS inchangé */
 .features h2 {
   text-align: center;
   margin: 1rem 0;
+  color: #0F172A;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
 }
 
 .features-table {
@@ -17,37 +33,30 @@
 .feature-item {
   background-color: white;
   display: flex;
-  flex-direction: row;      /* Met les enfants sur la même ligne */
-  align-items: center;      /* Centre verticalement */
-  min-width: 0;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   max-width: 150px;
-  position: relative;
   border-radius: 10px;
-  padding: .5rem 3rem;
-  margin: 1rem 0;
+  padding: 0.5rem 3rem;
+  margin: 1rem auto;
+  transition: box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item svg {
   width: 30px;
   height: 30px;
-  margin-bottom: 0;         /* Enlève le margin-bottom */
-  margin-right: 1rem;       /* Ajoute un espace à droite du svg */
+  margin-right: 1rem;
 }
 
 .feature-item p {
-  color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+  color: rgb(15 23 42);
   font-family: 'Inter', 'Courier New', Courier, monospace;
   font-size: 0.875rem;
   font-weight: 700;
   margin: 0;
-}
-
-.features h2 {
-    color: #0F172A;
-    font-family: 'Inter', 'Courier New', Courier, monospace;
 }

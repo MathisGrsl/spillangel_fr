@@ -1,0 +1,67 @@
+.examples {
+  padding: 2vh 2vw;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.examples h2 {
+  text-align: center;
+  margin: 1rem 0;
+  color: #0F172A;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+}
+
+.examples-table {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.examples-table::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  box-shadow: 0 0 250px 150px #1193D4;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.example-item {
+  transition: 2s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.examples.visible .example-item {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.examples.hidden .example-item {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.examples-table video {
+  width: 60%;
+  margin: 5%;
+}
+
+.examples-table img {
+  width: 30%;
+}
+
+.example-item:hover {
+  scale: 1.1;
+}
