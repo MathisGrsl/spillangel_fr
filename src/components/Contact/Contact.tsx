@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,31 +10,30 @@ const Contact = () => {
     };
 
     const sectionRef = useRef<HTMLElement | null>(null);
-        const [visible, setVisible] = useState(false);
-    
-        useEffect(() => {
-            const element = sectionRef.current;
-            const grandParent = sectionRef.current?.parentElement?.parentElement;
-            if (!element || !grandParent) return;
-    
-            const handleScroll = () => {
-                const grandParentRect = grandParent.getBoundingClientRect();
-                const rect = element.getBoundingClientRect();
-                const top = rect.top - grandParentRect.top;
-                const bottom = rect.bottom - grandParentRect.top;
-                const height = window.innerHeight;
-    
-                setVisible(bottom > 0 && top < height);
-            };
-    
-            grandParent.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-            return () => grandParent.removeEventListener('scroll', handleScroll);
-        }, []);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const element = sectionRef.current;
+        const grandParent = sectionRef.current?.parentElement?.parentElement;
+        if (!element || !grandParent) return;
+
+        const handleScroll = () => {
+            const grandParentRect = grandParent.getBoundingClientRect();
+            const rect = element.getBoundingClientRect();
+            const top = rect.top - grandParentRect.top;
+            const bottom = rect.bottom - grandParentRect.top;
+            const height = window.innerHeight;
+
+            setVisible(bottom > 0 && top < height);
+        };
+
+        grandParent.addEventListener('scroll', handleScroll, {passive: true});
+        handleScroll();
+        return () => grandParent.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <section className={`contact ${visible ? 'visible' : 'hidden'}`}
-            ref={sectionRef}>
+        <section className={`contact ${visible ? 'visible' : 'hidden'}`} ref={sectionRef}>
             <h2>Contact</h2>
             <div className="contact-content">
                 <div>

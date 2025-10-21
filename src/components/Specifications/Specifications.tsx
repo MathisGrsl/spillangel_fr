@@ -4,7 +4,7 @@ import './Specifications.css';
 const specificationsData = [
     {spec: 'Detection distance', value: '0.2 - 3 m'},
     {spec: 'Operating temperature', value: '-20°C to +60°C'},
-    {spec: 'Adjustable modulation', value: '0,1 - 2500 Hz'},
+    {spec: 'Analog Output', value: '4-20mA'},
     {spec: 'Sensitivity to oils', value: '1 µm oil film thickness'},
     {spec: 'Consumption', value: '1.5 W, 12 - 35 VDC (standard)'},
     {spec: 'Emission safety class', value: '3B'},
