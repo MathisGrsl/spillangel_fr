@@ -1,104 +1,103 @@
 /* === Animation d'apparition fluide === */
 .options {
-  padding: 2vh 2vw;
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto 5vh auto;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+    padding: 2vh 2vw;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 5vh auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .options.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .options.hidden {
-  opacity: 0;
-  transform: translateY(50px);
+    opacity: 0;
+    transform: translateY(50px);
 }
 
-/* === Styles existants === */
 .options h2 {
-  text-align: center;
-  margin: 1rem 0;
+    text-align: center;
+    margin: 1rem 0;
 }
 
 .options-content {
-  background-color: white;
-  border-radius: 15px;
-  position: relative;
-  transition: box-shadow 0.3s ease;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
 }
 
 .options-content:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .options-content::before {
-  content: "";
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #F0F3F7;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #f0f3f7;
 }
 
 .options-title {
-  display: flex;
+    display: flex;
 }
 
 .options-title h3 {
-  width: 50%;
-  text-align: center;
-  padding: 2% 0;
+    width: 50%;
+    text-align: center;
+    padding: 2% 0;
 }
 
 .options-comparison {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-  background-color: white;
-  border-radius: 20px;
-  position: relative;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
 }
 
 .options-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-top: 1px solid #F0F3F7;
-  min-width: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  box-sizing: border-box;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid #f0f3f7;
+    min-width: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .options-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  border-top: 1px solid #F0F3F7;
-  padding: 1rem 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    border-top: 1px solid #f0f3f7;
+    padding: 1rem 0;
 }
 
 .options-img img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.6s ease;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.6s ease;
 }
 
 .options-img img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }

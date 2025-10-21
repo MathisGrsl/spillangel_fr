@@ -54,7 +54,12 @@ const Navbar: React.FC<NavbarProps> = ({active, setActive, navItems}) => {
                     ))}
                 </ul>
             </nav>
-            <button className={`contact-button contact-anim${animate ? ' contact-anim-in' : ''}`}>Contact</button>
+            <button
+                onClick={() => handleClick('contact')}
+                className={`contact-button contact-anim${animate ? ' contact-anim-in' : ''}`}
+            >
+                Contact
+            </button>
         </aside>
     );
 };

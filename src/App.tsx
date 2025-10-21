@@ -17,7 +17,6 @@ const navItems = [
     {to: 'options', label: 'Options'},
     {to: 'examples', label: 'Examples'},
     {to: 'more', label: 'More'},
-    {to: 'contact', label: 'Contact'},
 ];
 
 const App: React.FC = () => {

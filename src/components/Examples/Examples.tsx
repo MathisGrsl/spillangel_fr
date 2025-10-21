@@ -8,7 +8,7 @@ const Examples = () => {
     useEffect(() => {
         const videos = document.querySelectorAll<HTMLVideoElement>('.examples-table video');
         videos.forEach((video) => {
-            video.volume = 0.3;
+            video.volume = 0.0;
         });
     }, []);
 

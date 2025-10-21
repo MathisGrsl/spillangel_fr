@@ -1,32 +1,32 @@
 .specifications {
-  opacity: 0;
-  transform: translateY(60px);
-  padding: 2vh 2vw;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(60px);
+    padding: 2vh 2vw;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .specifications.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .specifications h2 {
-  text-align: center;
-  margin: 1rem 0;
+    text-align: center;
+    margin: 1rem 0;
 }
 
 .specifications-table {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  background-color: white;
-  border-radius: 20px;
-  padding: 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
 }
 
 .specifications-table:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .specification-item {
@@ -42,32 +42,32 @@
 }
 
 .specification-item::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-  width: 95%;
-  height: 1px;
-  background-color: #1193D4;
-  transform: translate(-50%, 0%);
-  transition: 0.2s;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 95%;
+    height: 1px;
+    background-color: #1193d4;
+    transform: translate(-50%, 0%);
+    transition: 0.2s;
 }
 
 .spec {
-  color: #64748b;
-  font-family: 'Inter', 'Courier New', Courier, monospace;
-  font-weight: 500;
-  font-size: 0.875rem;
+    color: #64748b;
+    font-family: 'Inter', 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 0.875rem;
 }
 
 .value {
-  color: #0F172A;
-  font-family: 'Inter', 'Courier New', Courier, monospace;
-  font-size: 0.875rem;
-  font-weight: 500;
+    color: #0f172a;
+    font-family: 'Inter', 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .specifications h2 {
-    color: #0F172A;
+    color: #0f172a;
     font-family: 'Inter', 'Courier New', Courier, monospace;
 }
