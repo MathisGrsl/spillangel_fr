@@ -11,12 +11,12 @@ import Contact from './components/Contact/Contact';
 import './styles/global.css';
 
 const navItems = [
-    {to: 'product', label: 'Product'},
-    {to: 'features', label: 'Features'},
-    {to: 'specifications', label: 'Specifications'},
+    {to: 'product', label: 'Produit'},
+    {to: 'features', label: 'Caractéristiques'},
+    {to: 'specifications', label: 'Spécifications'},
     {to: 'options', label: 'Options'},
-    {to: 'examples', label: 'Examples'},
-    {to: 'more', label: 'More'},
+    {to: 'examples', label: 'Exemples'},
+    {to: 'more', label: 'Plus'},
 ];
 
 const App: React.FC = () => {
@@ -24,7 +24,6 @@ const App: React.FC = () => {
     const [showTranslate, setShowTranslate] = useState(true);
 
     useEffect(() => {
-        // Masquer automatiquement après 5 secondes
         const timer = setTimeout(() => setShowTranslate(false), 5000);
         return () => clearTimeout(timer);
     }, []);
@@ -51,17 +50,17 @@ const App: React.FC = () => {
     }, []);
 
     const handleTranslate = () => {
-        window.location.href = 'https://www.spillangel.fr';
+        window.location.href = 'https://www.spillangel.com';
     };
 
     return (
         <div className="app">
             {showTranslate && (
                 <div className="translate-banner">
-                    <span>Traduire en français ?</span>
+                    <span>Translate into English ?</span>
                     <div className="translate-buttons">
                         <button className="translate-btn" onClick={handleTranslate}>
-                            Traduire
+                            Translate
                         </button>
                     </div>
                 </div>

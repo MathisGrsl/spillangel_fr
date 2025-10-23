@@ -25,7 +25,7 @@ const featuresData = [
                 </g>
             </svg>
         ),
-        text: 'All Conditions',
+        text: 'Toutes conditions',
     },
     {
         svg: (
@@ -51,7 +51,7 @@ const featuresData = [
                 </g>
             </svg>
         ),
-        text: 'ATEX Zone',
+        text: 'Zone ATEX',
     },
     {
         svg: (
@@ -72,7 +72,7 @@ const featuresData = [
                 </g>
             </svg>
         ),
-        text: 'Reduced Maintenance',
+        text: 'Maintenance réduite',
     },
     {
         svg: (
@@ -98,7 +98,7 @@ const featuresData = [
                 </g>
             </svg>
         ),
-        text: 'Lightweight Transportable',
+        text: 'Léger et Transportable',
     },
 ];
 
@@ -130,7 +130,7 @@ const Features = () => {
 
     return (
         <section className={`features ${visible ? 'visible' : 'hidden'}`} ref={sectionRef}>
-            <h2>Key Features</h2>
+            <h2>Caractéristiques principales</h2>
             <div className="features-table">
                 {featuresData.map((item, index) => (
                     <div className="feature-item" key={index}>

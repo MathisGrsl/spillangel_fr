@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import './Product.css';
 
 const Product: React.FC = () => {
-    const title = 'OIL SPILL DETECTOR - SPILLANGEL';
+    const title = "DÉTECTEUR D'HUILE - SPILLANGEL";
     const description =
-        'is a sensor transmitter that detects the presence of hydrocarbons using invisible ultraviolet radiation.';
+        "est un émetteur de capteur qui détecte la présence d'hydrocarbures à l'aide de rayonnements ultraviolets invisibles.";
 
     const [visibleTitle, setVisibleTitle] = useState('');
     const [visibleDescription, setVisibleDescription] = useState('');

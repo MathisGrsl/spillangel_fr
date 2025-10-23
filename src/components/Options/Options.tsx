@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Options.css';
 
 const optionsData = [
-    { spec: 'Weight', value: '0.8 kg' },
-    { spec: 'Weight', value: '2.5 kg' },
-    { spec: 'Target', value: 'Diameter Ø 10 cm' },
-    { spec: 'Target', value: 'Diameter Ø 14 cm' },
-    { spec: 'Case', value: 'IP68, corrosion-resistant painted aluminum' },
-    { spec: 'Case', value: 'IP66, corrosion-resistant aluminum' },
+    { spec: 'Poids', value: '0.8 kg' },
+    { spec: 'Poids', value: '2.5 kg' },
+    { spec: 'Cible', value: 'Diamètre Ø 10 cm' },
+    { spec: 'Cible', value: 'Diamètre Ø 14 cm' },
+    { spec: 'Boîtier', value: 'IP68, aluminium peint résistant à la corrosion' },
+    { spec: 'Boîtier', value: 'IP66, aluminium résistant à la corrosion' },
 ];
 
 const Options = () => {
@@ -39,7 +39,7 @@ const Options = () => {
             className={`options ${visible ? 'visible' : 'hidden'}`}
             ref={sectionRef}
         >
-            <h2>Case Options</h2>
+            <h2>Options de boîtier</h2>
             <div className="options-content">
                 <div className="options-title">
                     <h3>Standard SpillAngel</h3>

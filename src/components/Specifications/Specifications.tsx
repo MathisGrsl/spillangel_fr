@@ -2,12 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 import './Specifications.css';
 
 const specificationsData = [
-    {spec: 'Detection distance', value: '0.2 - 3 m'},
-    {spec: 'Operating temperature', value: '-20°C to +60°C'},
-    {spec: 'Analog Output', value: '4-20mA'},
-    {spec: 'Sensitivity to oils', value: '1 µm oil film thickness'},
-    {spec: 'Consumption', value: '1.5 W, 12 - 35 VDC (standard)'},
-    {spec: 'Emission safety class', value: '3B'},
+    {spec: 'Distance de détection', value: '0.2 - 3 m'},
+    {spec: 'Température de fonctionnement', value: '-20°C à +60°C'},
+    {spec: 'Sortie analogique', value: '4-20mA'},
+    {spec: 'Sensibilité aux huiles', value: '1 µm d\'épaisseur de film huileux'},
+    {spec: 'Consommation', value: '1.5 W, 12 - 35 VDC (standard)'},
+    {spec: 'Classe de sécurité d\'émission', value: '3B'},
 ];
 
 const Specifications = () => {
@@ -33,7 +33,7 @@ const Specifications = () => {
 
     return (
         <section className={`specifications ${visible ? 'visible' : ''}`} ref={sectionRef}>
-            <h2>Technical Specifications</h2>
+            <h2>Spécifications techniques</h2>
             <div className="specifications-table">
                 {specificationsData.map((item, index) => (
                     <div className="specification-item" key={index}>

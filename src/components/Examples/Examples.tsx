@@ -37,7 +37,7 @@ const Examples = () => {
             className={`examples ${visible ? 'visible' : 'hidden'}`}
             ref={sectionRef}
         >
-            <h2>Examples on site</h2>
+            <h2>Examples sur site</h2>
             <div className="examples-table">
                 <video className="example-item" src="simulations/leakFromTank.mp4" controls />
                 <img className="example-item" src="examples/2.jpg" alt="Example 2" />

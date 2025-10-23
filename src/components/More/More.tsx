@@ -27,12 +27,12 @@ const More = () => {
 
     return (
         <section className={`more ${visible ? 'visible' : 'hidden'}`} ref={sectionRef}>
-            <h2>More Information</h2>
+            <h2>Plus d'informations</h2>
             <div className="more-content">
                 <p>
-                    The sensor uses pulsed ultraviolet (UV) light. When the UV light hits water or soil containing oil,
-                    the hydrocarbons absorb it and re-emit light at a shifted frequency (fluorescence). This fluorescent
-                    signal is detected, analyzed, and triggers an ALARM through the communication line. The sensor is
+                    Le capteur utilise de la lumière ultraviolette (UV) pulsée. Lorsque la lumière UV frappe de l'eau ou du sol contenant de l'huile,
+                    les hydrocarbures l'absorbent et réémettent de la lumière à une fréquence décalée (fluorescence). Ce signal fluorescent
+                    est détecté, analysé et déclenche une ALARME via la ligne de communication. Le capteur est
                     insensitive to other objects in its detection area. SpillAngel can detect various petroleum
                     products, including crude oil, diesel, heating oil, hydraulic and lubricating oils, and marine
                     diesel.
