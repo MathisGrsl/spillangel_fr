@@ -18,7 +18,7 @@
 .specifications-table {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     background-color: white;
     border-radius: 20px;
@@ -35,7 +35,7 @@
     align-items: flex-start;
     min-width: 0;
     width: 100%;
-    min-width: 300px;
+    min-width: 150px;
     padding: 1rem;
     box-sizing: border-box;
     position: relative;

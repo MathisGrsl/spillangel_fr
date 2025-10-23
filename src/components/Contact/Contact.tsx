@@ -119,10 +119,10 @@ const Contact = () => {
                             setTimeout(() => {
                                 if (target) target.style.pointerEvents = 'auto';
                             }, 1000);
-                            handleCopy('contact@sensotop.com');
+                            handleCopy('contact@spillangel.com');
                         }}
                     >
-                        contact@sensotop.com
+                        contact@spillangel.com
                     </p>
                 </div>
                 <div>

@@ -7,8 +7,8 @@ import Options from './components/Options/Options';
 import More from './components/More/More';
 import Footer from './components/Footer/Footer';
 import Examples from './components/Examples/Examples';
-import './styles/global.css';
 import Contact from './components/Contact/Contact';
+import './styles/global.css';
 
 const navItems = [
     {to: 'product', label: 'Product'},
@@ -21,10 +21,16 @@ const navItems = [
 
 const App: React.FC = () => {
     const [active, setActive] = useState('product');
+    const [showTranslate, setShowTranslate] = useState(true);
+
+    useEffect(() => {
+        // Masquer automatiquement après 5 secondes
+        const timer = setTimeout(() => setShowTranslate(false), 5000);
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         const content = document.querySelector('.content');
-
         if (!content) return;
 
         const handleScroll = () => {
@@ -44,8 +50,23 @@ const App: React.FC = () => {
         return () => content.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleTranslate = () => {
+        window.location.href = 'https://www.spillangel.fr';
+    };
+
     return (
         <div className="app">
+            {showTranslate && (
+                <div className="translate-banner">
+                    <span>Traduire en français ?</span>
+                    <div className="translate-buttons">
+                        <button className="translate-btn" onClick={handleTranslate}>
+                            Traduire
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <Navbar active={active} setActive={setActive} navItems={navItems} />
             <div className="content">
                 <section id="product">

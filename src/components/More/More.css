@@ -44,3 +44,21 @@
     width: 60%;
     font-family: 'Inter', 'Courier New', Courier, monospace;
 }
+
+@media (max-width: 800px) {
+    .more {
+        width: 90%;
+    }
+    .more-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .more-content img {
+        width: 90%;
+    }
+
+    .more-content p {
+        width: 90%;
+        font-family: 'Inter', 'Courier New', Courier, monospace;
+    }
+}
